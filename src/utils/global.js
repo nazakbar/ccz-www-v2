@@ -20,8 +20,8 @@ const GlobalStyles = () => (
         padding: 0;
         font-family: ${fontDefault};
         font-weight: 400;
-        font-size: ${fonts.sizeSm};
-        line-height: 1.533;
+        font-size: 16px;
+        line-height: ${fonts.sizeLineHeight};
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
