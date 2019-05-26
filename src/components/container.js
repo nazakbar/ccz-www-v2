@@ -14,7 +14,7 @@ export const HeaderContainer = styled.header `
   border-bottom: ${props => props.open ? `1px solid ${colors.grayTransparent}` : 0};
   transition: border-bottom 0.15s ease;
 
-  @media ${media.medium} {
+  @media ${media.small} {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -48,6 +48,8 @@ export const MenuItemContainer = styled.div `
 `
 
 export const FooterContainer = styled.footer `
+  width: 100%;
+  padding: 88px 0 36px;
   display: flex;
   flex-direction: column;
 `

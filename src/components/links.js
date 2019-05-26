@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import { fonts, colors, media } from "../utils/styles"
 
 export const PageLink = styled(Link) `
+  display: inline-flex;
   align-self: ${props => props.menu ? 'flex-start' : 'flex-end'};
   padding: ${props => props.menu ? '12px 12px 12px 30px' : '12px 30px 12px 12px'};
   font-size: ${props => props.menu ? `${fonts.h1Sm}` : `${fonts.metaSm}`};
@@ -31,6 +32,7 @@ export const PageLink = styled(Link) `
 `
 
 export const LegalLink = styled(Link) `
+  display: inline-flex;
   padding: 12px 12px 12px 30px;
   font-size: ${fonts.metaSm};
   line-height: ${fonts.metaLineHeight};
@@ -47,6 +49,7 @@ export const LegalLink = styled(Link) `
 `
 
 export const ExtLinks = styled.a `
+  display: inline-flex;
   align-self: ${props => props.menu ? 'flex-start' : 'flex-end'};
   padding: ${props => props.menu ? '12px 12px 12px 30px' : '12px 30px 12px 12px'};
   font-size: ${fonts.metaSm};

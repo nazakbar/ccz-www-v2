@@ -41,6 +41,16 @@ const GlobalStyles = () => (
         box-sizing: inherit;
       }
 
+      a,
+      button,
+      input,
+      option,
+      optgroup,
+      select,
+      textarea {
+        line-height: 1;
+      }
+
       a {
         text-decoration: none;
         background-color: transparent;
