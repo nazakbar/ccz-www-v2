@@ -2,7 +2,9 @@ import React, { useState } from "react"
 
 import { NavigationsMobile } from "./navigationsMobile"
 import { MenuContainer } from "./menuContainer"
-import { MenuExternalLinks, Menu } from "./linkNavigations";
+import { MenuExternalLinks, Navigations } from "./linkNavigations"
+import { HeaderContainer } from "./container"
+import { Copyright } from "./copyright"
 
 const Header = () => {
 
@@ -29,14 +31,15 @@ const Header = () => {
   }
 
   return (
-    <header>
+    <HeaderContainer open={!isToggle}>
       <NavigationsMobile onClick={handleClick}>{`${!isToggle ? 'Close' : 'Menu'}`}</NavigationsMobile>
       <MenuContainer open={!isToggle}>
-        <MenuExternalLinks links={socialLinks} />
-        <Menu links={pageLinks} />
-        <span>© Concrezan {new Date().getFullYear()}</span>
+        <MenuExternalLinks menu="true" links={socialLinks} />
+        <Navigations menu="true" links={pageLinks} />
+        <Copyright menu="true" />
       </MenuContainer>
-    </header>
+      <Navigations links={pageLinks} />
+    </HeaderContainer>
   )
 }
 

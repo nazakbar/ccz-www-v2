@@ -1,10 +1,12 @@
 import React from "react"
 
 import { HomeLink } from "./brandmark"
+import { MenuDisplay } from "./container"
+import { ButtonMenu } from "./buttons"
 
 export const NavigationsMobile = ({ children, onClick }) => (
-  <div>
+  <MenuDisplay>
     <HomeLink onClick={onClick} />
-    <button onClick={onClick}>{children}</button>
-  </div>
+    <ButtonMenu onClick={onClick}>{children}</ButtonMenu>
+  </MenuDisplay>
 )

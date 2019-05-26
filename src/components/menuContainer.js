@@ -1,13 +1,23 @@
 import React from "react"
+import {
+  Transition as ReactTransition,
+} from "react-transition-group"
 
-export const MenuContainer = ({ open, children, className }) => {
+import { MenuItemContainer } from "./container"
+
+export const MenuContainer = ({ children, open, className }) =>  {
+
   return (
-    <div className={className}>
-      {
-        open
-        ? children
-        : null
-      }
-    </div>
+    <ReactTransition in={open} timeout={{ enter: 250, exit: 250 }}>
+      {(state) => (
+        <MenuItemContainer state={state} className={className}>
+          {
+            open
+            ? children
+            : null
+          }
+        </MenuItemContainer>
+      )}
+    </ReactTransition>
   )
 }
