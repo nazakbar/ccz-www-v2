@@ -2,6 +2,18 @@ import styled from "@emotion/styled"
 
 import { colors, media } from "../utils/styles"
 
+export const TransitionIndicator = styled.div `
+  position: absolute;
+  bottom: ${({ status }) => (status === "entering" || status === "entered" ? 0 : '-100%')};
+  height: 100vh;
+  width: 100vw;
+  z-index: 18;
+  background: ${colors.gray};
+  opacity: ${({ status }) => (status === "entering" || status === "entered" ? 0 : 0.3)};
+  transform: ${({ status }) => (status === "entering" || status === "entered" ? `translateY(-100%)` : `translateY(100%)`)};;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+`
+
 export const HeaderContainer = styled.header `
   display: flex;
   flex-direction: column;
