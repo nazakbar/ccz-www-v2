@@ -3,8 +3,8 @@ import React from "react"
 import { Nav } from "./container"
 import { PageLink, LegalLink, ExtLinks } from "./links"
 
-export const Navigations = ({ links, className, onClick, menu }) => (
-  <Nav menu={menu}>
+export const Navigations = ({ links, className, onClick, menu, header, page }) => (
+  <Nav header={header} page={page}>
     {links.map((link, index) => (
       <PageLink
         className={className}
@@ -19,8 +19,8 @@ export const Navigations = ({ links, className, onClick, menu }) => (
   </Nav>
 )
 
-export const Legal = ({ links, className, onClick, menu }) => (
-  <Nav menu={menu}>
+export const Legal = ({ links, className, onClick, menu, legal }) => (
+  <Nav legal={legal} menu={menu}>
     {links.map((link, index) => (
       <LegalLink
         className={className}

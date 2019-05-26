@@ -37,14 +37,14 @@ const Home = styled(Link) `
   }
 `
 
-const LetterIcon = styled(LetterMark) `
+export const LetterIcon = styled(LetterMark) `
   
   @media ${media.medium} {
-    height: 0;
+    height: ${props => props.header ? 0 : '20px'};
   }
 `
 
-const WordIcon = styled(WordMark) `
+export const WordIcon = styled(WordMark) `
   height: 0;
 
   @media ${media.medium} {
@@ -56,9 +56,8 @@ const WordIcon = styled(WordMark) `
   }
 `
 
-export const HomeLink = () => (
+export const HomeLink = ({ children }) => (
   <Home to="/">
-    <LetterIcon />
-    <WordIcon />
+    {children}
   </Home>
 )

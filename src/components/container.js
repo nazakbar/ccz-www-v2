@@ -26,13 +26,13 @@ export const MenuDisplay = styled.div `
 `
 
 export const Nav = styled.nav `
-  display: ${props => props.menu ? 'flex' : 'none'};
+  display: ${props => props.header ? 'none' : 'flex'};
   flex-direction: column;
-  padding: ${props => props.menu ? '48px 0 24px' : '0'};
+  padding: ${props => props.page ? '48px 0 24px' : '0'};
 
   @media ${media.small} {
     display: ${props => props.menu ? 'none' : 'flex'};
-    flex-direction: ${props => props.menu ? 'column' : 'row'};
+    flex-direction: ${props => props.legal ? 'column' : 'row'};
   }
 `
 
@@ -45,4 +45,20 @@ export const MenuItemContainer = styled.div `
   background: ${colors.darkest};
   opacity: ${({ state }) => (state === "entering" || state === "entered" ? 1 : 0)};
   transition: opacity 0.7s ease 0.5s, height 0.5s ease;
+`
+
+export const FooterContainer = styled.footer `
+  display: flex;
+  flex-direction: column;
+`
+
+export const FooterSection = styled.section `
+  display: flex;
+  justify-content: space-between;
+`
+
+export const LegalContainer = styled.div `
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `

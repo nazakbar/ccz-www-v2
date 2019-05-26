@@ -35,10 +35,10 @@ const Header = () => {
       <NavigationsMobile onClick={handleClick}>{`${!isToggle ? 'Close' : 'Menu'}`}</NavigationsMobile>
       <MenuContainer open={!isToggle}>
         <MenuExternalLinks menu="true" links={socialLinks} />
-        <Navigations menu="true" links={pageLinks} />
+        <Navigations page="true" menu="true" links={pageLinks} />
         <Copyright menu="true" />
       </MenuContainer>
-      <Navigations links={pageLinks} />
+      <Navigations header="true" links={pageLinks} />
     </HeaderContainer>
   )
 }
