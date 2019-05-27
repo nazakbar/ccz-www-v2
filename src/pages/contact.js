@@ -6,12 +6,13 @@ import { Body, H1, H4 } from "../components/typography"
 
 const ContactPage = () => (
   <>
+    <SEO title="Contact" />
     <HeroSection>
       <H4>Contact Us</H4>
       <H1>Let’s work together.</H1>
       <Body>If you want to transform your business or get to know more about what we're doing, you're in the right place.</Body>
     </HeroSection>
-    <SectionSmall>
+    <SectionSmall left="true">
       <Body>Fill in the form, or, if you prefer, send us an email.</Body>
     </SectionSmall>
   </>

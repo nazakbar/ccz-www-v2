@@ -117,11 +117,11 @@ export const SectionSmall = styled(BaseSection) `
   padding: 128px 0 88px;
 
   @media ${media.medium} {
-    padding: 192px ${padding.md} 128px 0;
+    padding: ${props => props.left ? `192px 0 128px ${padding.sm}` : `192px ${padding.md} 128px 0`};
   }
 
   @media ${media.large} {
-    padding: 192px ${padding.xlg} 128px 0;
+    padding: ${props => props.left ? `192px 0 128px ${padding.lg}` :`192px ${padding.xlg} 128px 0`};
   }
 `
 
