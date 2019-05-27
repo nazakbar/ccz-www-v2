@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 
-import { colors, media, padding } from "../utils/styles"
+import { colors, fonts, media, padding } from "../utils/styles"
 
 export const TransitionIndicator = styled.div `
   position: absolute;
@@ -122,5 +122,49 @@ export const SectionSmall = styled(BaseSection) `
 
   @media ${media.large} {
     padding: 192px ${padding.xlg} 128px 0;
+  }
+`
+
+export const List = styled.ul `
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 48px 0 0;
+  list-style: none;
+
+  @media ${media.medium} {
+    margin: 64px 0 0;
+  }
+
+  @media ${media.large} {
+    max-height: 176px;
+    max-width: 100%;
+  }
+`
+
+export const ListItem = styled.li `
+  font-weight: 400;
+  font-size: ${fonts.metaSm};
+  line-height: ${fonts.metaLineHeight};
+  color: ${colors.textDark};
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: '—';
+    margin-right: 8px;
+  }
+
+  @media ${media.large} {
+    font-size: ${fonts.metaMd};
+    margin-bottom : 24px;
+
+    ::before {
+      margin-right: 16px;
+    }
   }
 `
