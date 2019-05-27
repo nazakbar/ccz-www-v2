@@ -3,6 +3,7 @@ import React from "react"
 import SEO from "../components/seo"
 import { HeroSection, SectionLarge, ListParagraph, ParagraphContainer, ListMeta } from "../components/container"
 import { Body, BodyMeta, H1, H2, H3, H4 } from "../components/typography"
+import { FullDividers, InsetDividers } from "../components/dividers"
 import { ContactSection } from "../components/contactSection"
 
 const PrivacyPolicyPage = () => {
@@ -17,10 +18,12 @@ const PrivacyPolicyPage = () => {
         <H1>Privacy Policy</H1>
         <Body>This Privacy Policy describes how we collect, use, process, and disclose your information, including personal information, in conjunction with your access to and use of the Site.</Body>
       </HeroSection>
+      <FullDividers />
       <SectionLarge>
         <Body>If you see an undefined term in this Privacy Policy (such as “Site”), it has the same definition as in our Terms of Use.</Body>
         <Body>When this policy mentions “Concrezan,” “we,” “us,” or “our,” it refers to the Concrezan Studio company that is responsible for your information under this Privacy Policy.</Body>
       </SectionLarge>
+      <FullDividers />
       <SectionLarge>
         <H2>Information We Collect</H2>
         <Body>We only ask for personal information when we truly need it to provide our service to you. We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be used.</Body>
@@ -64,6 +67,7 @@ const PrivacyPolicyPage = () => {
         <H3>Information We Collect from Third-Parties.</H3>
         <Body>Our website may link to external sites that are not operated by us. We do not control or supervise or respond for how third-parties providing your information process your personal data, and any information request regarding the disclosure of your personal information to us should be directed to such third-parties.</Body>
       </SectionLarge>
+      <InsetDividers />
       <SectionLarge>
         <H2>How we use the information we collect</H2>
         <Body>We use, store, and process information, including personal information, about you to provide, understand, improve, and develop the Site, and comply with our legal obligations.</Body>
@@ -88,20 +92,24 @@ const PrivacyPolicyPage = () => {
           </ListMeta>
         </ListParagraph>
       </SectionLarge>
+      <InsetDividers />
       <SectionLarge>
         <H2>Other Important Information</H2>
         <Body>We only retain collected information for as long as necessary to provide you with your requested service. What data we store, we’ll protect within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use or modification.</Body>
         <Body>We don’t share any personally identifying information publicly or with third-parties, except when required by law.</Body>
         <Body>You are free to refuse our request for your personal information, with the understanding that we may be unable to provide you with some of the desired services.</Body>
       </SectionLarge>
+      <InsetDividers />
       <SectionLarge>
         <H2>Changes to this privacy policy</H2>
         <Body>Concrezan reserves the right to modify this Privacy Policy at any time in accordance with this provision. If we make changes to this Privacy Policy, we will post the revised Privacy Policy on the Site and update the “Last Updated” date at the top of this Privacy Policy. By your continued access to or use of the Site will be subject to the revised Privacy Policy.</Body>
       </SectionLarge>
+      <InsetDividers />
       <SectionLarge>
         <H2>Contact Us</H2>
         <Body>If you have any questions about how we handle user data and personal information, feel free to contact us.</Body>
       </SectionLarge>
+      <FullDividers />
       <ContactSection />
     </>
   )
