@@ -72,3 +72,23 @@ export const ExtLinks = styled.a `
     }
   }
 `
+
+export const SectionLink = styled(Link) `
+  align-self: flex-start;
+  margin: 40px 0 0;
+  font-weight: 600;
+  font-size: ${fonts.metaSm};
+  line-height: ${fonts.metaLineHeight};
+  color: ${colors.textLight};
+  color: ${props => props.contact ? `${colors.yellow}` : `${colors.textLight}`};
+  text-decoration: underline ${colors.grayAlpha};
+
+  :hover {
+    color: ${colors.textLight};
+    text-decoration: underline ${colors.yellow};
+  }
+
+  @media ${media.large} {
+    font-size: ${fonts.metaMd};
+  }
+`

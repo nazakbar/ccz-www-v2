@@ -29,7 +29,7 @@ const Layout = ({ children, location }) => (
     render={data => (
       <>
         <GlobalStyles />
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header />
         <PageTransition location={location}>
           {children}
           <Footer />

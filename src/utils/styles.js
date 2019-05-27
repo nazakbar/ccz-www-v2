@@ -49,6 +49,13 @@ export const media = {
   large: `(min-width: 1200px)`,
 }
 
+export const padding = {
+  sm: `calc((((100vw - 200px) / 8) * 2) + 40px)`,
+  md: `calc((((100vw - 200px) / 8) * 4) + 80px)`,
+  lg: `calc((((100vw - 420px) / 12) * 4) + 96px)`,
+  xlg: `calc((((100vw - 420px) / 12) * 8) + 192px)`
+}
+
 export const animations = {
   transitionFast: '250ms',
   transitionTime: '500ms',

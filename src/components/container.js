@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 
-import { colors, media } from "../utils/styles"
+import { colors, media, padding } from "../utils/styles"
 
 export const TransitionIndicator = styled.div `
   position: absolute;
@@ -10,14 +10,14 @@ export const TransitionIndicator = styled.div `
   z-index: 18;
   background: ${colors.gray};
   opacity: ${({ status }) => (status === "entering" || status === "entered" ? 0 : 0.3)};
-  transform: ${({ status }) => (status === "entering" || status === "entered" ? `translateY(-100%)` : `translateY(100%)`)};;
+  transform: ${({ status }) => (status === "entering" || status === "entered" ? `translateY(-100%)` : `translateY(100%)`)};
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 `
 
 export const HeaderContainer = styled.header `
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
   position: ${props => props.open ? 'fixed' : 'absolute'};
   top: 0;
   left: 0;
@@ -75,4 +75,52 @@ export const LegalContainer = styled.div `
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+`
+
+export const BaseSection = styled.section `
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px;
+
+  @media ${media.large} {
+    margin: 0 78px;
+  }
+`
+
+export const HeroSection = styled(BaseSection) `
+  height: calc(100vh - 64px);
+  padding: 0 0 48px;
+  justify-content: flex-end;
+
+  @media ${media.medium} {
+    padding-right: ${padding.md};
+  }
+
+  @media ${media.large} {
+    padding-right: ${padding.xlg};
+  }
+`
+
+export const SectionLarge = styled(BaseSection) `
+  padding: 128px 0;
+
+  @media ${media.medium} {
+    padding: ${props => props.right ? `128px ${padding.sm} 128px 0` : `128px 0 128px ${padding.sm}`};
+  }
+
+  @media ${media.large} {
+    padding: ${props => props.right ? `192px ${padding.lg} 192px 0` : `192px 0 192px ${padding.lg}`};
+  }
+`
+
+export const SectionSmall = styled(BaseSection) `
+  padding: 128px 0 88px;
+
+  @media ${media.medium} {
+    padding: 192px ${padding.md} 128px 0;
+  }
+
+  @media ${media.large} {
+    padding: 192px ${padding.xlg} 128px 0;
+  }
 `
