@@ -57,7 +57,7 @@ export const WordIcon = styled(WordMark) `
 `
 
 export const HomeLink = ({ children }) => (
-  <Home to="/">
+  <Home to="/" aria-label="homepage">
     {children}
   </Home>
 )
