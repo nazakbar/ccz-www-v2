@@ -34,6 +34,14 @@ export const H2 = styled.h2 `
   }
 `
 
+export const H3 = styled.h3 `
+  font-weight: 600;
+  font-size: ${fonts.h3Sm};
+  line-height: ${fonts.h3LineHeight};
+  margin: ${props => props.alt ? `0 0 16px` : `48px 0 24px`};
+  color: ${props => props.alt ? `${colors.textDark}` : `${colors.textLight}`};
+`
+
 export const H4 = styled.h4 `
   margin: 0 0 24px;
   font-weight: 400;
@@ -52,6 +60,16 @@ export const Body = styled.p `
 
   @media ${media.large} {
     font-size: ${fonts.sizeMd};
+  }
+`
+
+export const BodyMeta = styled.p `
+  margin: 0 0 16px;
+  font-size: ${fonts.metaSm};
+  colors: ${colors.textDark};
+
+  @media ${media.large} {
+    font-size: ${fonts.metaMd};
   }
 `
 

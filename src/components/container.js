@@ -168,3 +168,58 @@ export const ListItem = styled.li `
     }
   }
 `
+
+export const ListParagraph = styled.ul `
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 24px 0 0;
+  list-style: none;
+`
+
+export const ListParagraphItem = styled.li `
+  display: flex;
+  margin-bottom : 16px;
+  padding: 0;
+  color: ${colors.gray};
+
+  &::before {
+    content: '—';
+    margin-right: 8px;
+  }
+
+  @media ${media.large} {
+    margin-bottom : 24px;
+
+    ::before {
+      margin-right: 16px;
+    }
+  }
+`
+
+export const ParagraphContainer = styled.div `
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+`
+
+export const ListMeta = styled.li `
+  display: flex;
+  margin-bottom : 16px;
+  padding: 0;
+  color: ${colors.gray};
+
+  &::before {
+    content: '—';
+    margin-right: 8px;
+  }
+
+  @media ${media.large} {
+    margin-bottom : 24px;
+
+    ::before {
+      margin-right: 16px;
+    }
+  }
+`
