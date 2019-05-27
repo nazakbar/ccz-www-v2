@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-// import { database } from "./firebase"
+import { database } from "./firebase"
 
 export const useForm = (callback, initialValues, validate) => {
 
@@ -22,14 +22,14 @@ export const useForm = (callback, initialValues, validate) => {
     if (event) event.preventDefault()
     setIsSubmitting(true);
     setErrors(validate(values))
-    // const db = database;
-    // db.collection("contacts").add({
-    //   type: selected,
-    //   name: values.name,
-    //   email: values.email,
-    //   organization: values.organization,
-    //   message: values.message
-    // });
+    const db = database;
+    db.collection("contacts").add({
+      type: selected,
+      name: values.name,
+      email: values.email,
+      organization: values.organization,
+      message: values.message
+    });
   }
 
   const handleChange = (event) => {
