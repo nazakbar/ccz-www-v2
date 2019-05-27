@@ -15,3 +15,17 @@ export const ButtonMenu = styled.button `
     display: none;
   }
 `
+
+export const ButtonSubmit = styled.button `
+  align-self: flex-end;
+  padding: 16px 56px;
+  border-radius: 24px;
+  font-size: ${fonts.metaSm};
+  font-weight: 600;
+  color: ${colors.textLight};
+  background: ${colors.yellow};
+
+  :disabled {
+    background: ${colors.grayTransparent};
+  }
+`

@@ -1,8 +1,9 @@
 import React from "react"
 
 import SEO from "../components/seo"
-import { HeroSection, SectionSmall } from "../components/container"
+import { HeroSection, SectionLarge, SectionSmall } from "../components/container"
 import { Body, H1, H4 } from "../components/typography"
+import { ContactForm } from "../components/contactForm"
 
 const ContactPage = () => (
   <>
@@ -15,6 +16,9 @@ const ContactPage = () => (
     <SectionSmall left="true">
       <Body>Fill in the form, or, if you prefer, send us an email.</Body>
     </SectionSmall>
+    <SectionLarge>
+      <ContactForm />
+    </SectionLarge>
   </>
 )
 
