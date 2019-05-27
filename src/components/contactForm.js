@@ -5,6 +5,7 @@ import { RadioGroup, RadioInput } from "./radioGroup"
 import { FieldGroup, MessageInput, FieldsInput } from "./fieldsGroup"
 import { useForm } from "./form-hook"
 import validate from "./validationRules"
+import { Submission } from "./submission"
 
 export const ContactForm = () => {
 
@@ -22,8 +23,12 @@ export const ContactForm = () => {
   }
 
   return (
-    <FormContainer label="Send" onSubmit={handleSubmit}>
-      <p>{result}</p>
+    <FormContainer label="Send" onSubmit={handleSubmit} result={result}>
+      {
+        result 
+        ? <Submission label={result} /> 
+        : null
+      }
       <RadioGroup groupLabel="Are you contacting us for">
         <RadioInput 
           name="business"

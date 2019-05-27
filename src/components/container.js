@@ -223,3 +223,10 @@ export const ListMeta = styled.li `
     }
   }
 `
+
+export const SubmissionContainer = styled.div `
+  position: relative;
+  display: flex;
+  align-self: flex-start;
+  background: ${colors.darkest};
+`
