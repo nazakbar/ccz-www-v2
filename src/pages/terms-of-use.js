@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import { HeroSection, SectionLarge } from "../components/container"
 import { Body, H1, H2, H4 } from "../components/typography"
 import { FullDividers, InsetDividers } from "../components/dividers"
+import { InlineLink } from "../components/links"
 import { ContactSection } from "../components/contactSection"
 
 const TermsOfUsePage = () => {
@@ -22,7 +23,7 @@ const TermsOfUsePage = () => {
       <SectionLarge>
         <Body>These Terms of Service (“Terms”) constitute a legally binding agreement (“Agreement”) between you and Concrezan (as defined below) governing your access to and use of the Concrezan website, including any subdomain thereof, and any other websites through which Concrezan makes its services available (collectively, “Site”).</Body>
         <Body>When these Terms mention “Concrezan,” “we,” “us,” or “our,” it refers to Concrezan Studio company you are contracting with.</Body>
-        <Body>Our collection and use of personal information in connection with your access to and use of the Site is described in our Privacy Policy.</Body>
+        <Body>Our collection and use of personal information in connection with your access to and use of the Site is described in our <InlineLink to="/privacy-policy">Privacy Policy</InlineLink>.</Body>
       </SectionLarge>
       <FullDividers />
       <SectionLarge>

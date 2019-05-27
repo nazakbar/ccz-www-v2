@@ -80,8 +80,8 @@ export const SectionLink = styled(Link) `
   font-size: ${fonts.metaSm};
   line-height: ${fonts.metaLineHeight};
   color: ${colors.textLight};
-  color: ${props => props.contact ? `${colors.yellow}` : `${colors.textLight}`};
-  text-decoration: underline ${colors.grayAlpha};
+  color: ${colors.textLight};
+  text-decoration: ${props => props.contact ? ` underline ${colors.yellow}` : ` underline ${colors.grayAlpha}`};
 
   :hover {
     color: ${colors.textLight};
@@ -91,4 +91,10 @@ export const SectionLink = styled(Link) `
   @media ${media.large} {
     font-size: ${fonts.metaMd};
   }
+`
+
+export const InlineLink = styled(Link) `
+  font-size: inherit;
+  font-weight: inherit;
+  color: ${colors.yellow};
 `

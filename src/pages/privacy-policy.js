@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import { HeroSection, SectionLarge, ListParagraph, ParagraphContainer, ListMeta } from "../components/container"
 import { Body, BodyMeta, H1, H2, H3, H4 } from "../components/typography"
 import { FullDividers, InsetDividers } from "../components/dividers"
+import { InlineLink } from "../components/links"
 import { ContactSection } from "../components/contactSection"
 
 const PrivacyPolicyPage = () => {
@@ -20,7 +21,7 @@ const PrivacyPolicyPage = () => {
       </HeroSection>
       <FullDividers />
       <SectionLarge>
-        <Body>If you see an undefined term in this Privacy Policy (such as “Site”), it has the same definition as in our Terms of Use.</Body>
+        <Body>If you see an undefined term in this Privacy Policy (such as “Site”), it has the same definition as in our <InlineLink to="/terms-of-use">Terms of Use</InlineLink>.</Body>
         <Body>When this policy mentions “Concrezan,” “we,” “us,” or “our,” it refers to the Concrezan Studio company that is responsible for your information under this Privacy Policy.</Body>
       </SectionLarge>
       <FullDividers />
@@ -107,7 +108,7 @@ const PrivacyPolicyPage = () => {
       <InsetDividers />
       <SectionLarge>
         <H2>Contact Us</H2>
-        <Body>If you have any questions about how we handle user data and personal information, feel free to contact us.</Body>
+        <Body>If you have any questions about how we handle user data and personal information, feel free to <InlineLink to="/contact">contact us</InlineLink>.</Body>
       </SectionLarge>
       <FullDividers />
       <ContactSection />
