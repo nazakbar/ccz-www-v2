@@ -29,3 +29,7 @@ export const ButtonSubmit = styled.button `
     background: ${colors.grayTransparent};
   }
 `
+
+export const ButtonCopy = styled.button `
+  color: ${colors.yellow};
+`
