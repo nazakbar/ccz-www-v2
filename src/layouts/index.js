@@ -12,7 +12,6 @@ import { StaticQuery, graphql } from "gatsby"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import PageTransition from "../components/page-transition"
-// import "./layout.css"
 import GlobalStyles from "../utils/global"
 
 const Layout = ({ children, location }) => (
