@@ -34,7 +34,7 @@ module.exports = {
       options: {
         analyzerPort: 3000,
         production: true,
-        disable: true
+        // disable: true
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
