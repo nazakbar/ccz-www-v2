@@ -7,10 +7,13 @@ import { FullDividers } from "../components/dividers"
 import { ContactForm } from "../components/contactForm"
 import { Email } from "../components/copyText"
 
-const ContactPage = ({ isCopied }) => (
+const ContactPage = () => (
 
   <>
-    <SEO title="Contact" />
+    <SEO 
+      title="Contact" 
+      description="Find contact information for engaging with us and career opportunities with our design firm. Concrezan is a brand experience and service design consultancy."
+    />
     <HeroSection>
       <H4>Contact Us</H4>
       <H1>Let’s work together.</H1>

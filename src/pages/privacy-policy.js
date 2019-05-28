@@ -9,13 +9,14 @@ import { ContactSection } from "../components/contactSection"
 
 const PrivacyPolicyPage = () => {
 
-  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-
   return (
     <>
-      <SEO title="Privacy Policy" />
+      <SEO 
+        title="Privacy Policy" 
+        description="Information we collect and how we use it."
+      />
       <HeroSection>
-        <H4>Effective Date: {months[new Date().getMonth()]}{` `}{new Date().getDate()},{` `}{new Date().getFullYear()}</H4>
+        <H4>Effective Date: May 28,{` `}{new Date().getFullYear()}</H4>
         <H1>Privacy Policy</H1>
         <Body>This Privacy Policy describes how we collect, use, process, and disclose your information, including personal information, in conjunction with your access to and use of the Site.</Body>
       </HeroSection>

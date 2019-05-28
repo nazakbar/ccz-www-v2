@@ -8,7 +8,10 @@ import { ContactSection } from "../components/contactSection"
 
 const CompanyPage = () => (
   <>
-    <SEO title="Company" />
+    <SEO 
+      title="Company" 
+      description="We’re built different. We dream big. Learn how we help redesign organizations into modern service providers and brands to deliver meaningful experiences. Concrezan is a brand experience and service design consultancy."
+    />
     <HeroSection>
       <H4>Who We Are</H4>
       <H1>Brand experience, service design, and future innovation.</H1>

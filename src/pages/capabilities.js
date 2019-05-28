@@ -16,7 +16,10 @@ const CapabilitiesPage = () => {
   const technologyList = ['Web Application', 'Native Application', 'Commerce', 'Voice', 'Internet of Things', 'AR/VR']
   return (
     <>
-      <SEO title="Capabilities" />
+      <SEO 
+        title="Capabilities" 
+        description="Learn how we use strategy, design, and technology to deliver value to customers and lead organizations to future innovation. Concrezan is a brand experience and service design consultancy."
+      />
       <HeroSection>
         <H4>What We Do</H4>
         <H1>Strategy, design, and technology.</H1>

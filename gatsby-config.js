@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Concrezan`,
-    description: `TBA`,
+    description: `Concrezan is an independent brand experience and service design consultancy. We’re built different. We dream big for a better future.`,
     author: `@concrezan`,
   },
   plugins: [
