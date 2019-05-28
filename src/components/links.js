@@ -95,6 +95,11 @@ export const SectionLink = styled(Link) `
 
 export const InlineLink = styled(Link) `
   font-size: inherit;
-  font-weight: inherit;
-  color: ${colors.yellow};
+  font-weight: 600;
+  color: ${colors.textLight};
+  text-decoration: underline ${colors.textLight};
+
+  :hover {
+    text-decoration: underline ${colors.yellow};
+  }
 `
