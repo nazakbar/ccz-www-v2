@@ -6,70 +6,62 @@ import { fonts, colors, media } from "../utils/styles"
 export const PageLink = styled(Link) `
   display: inline-flex;
   align-self: ${props => props.menu ? 'flex-start' : 'flex-end'};
-  padding: ${props => props.menu ? '12px 12px 12px 30px' : '12px 30px 12px 12px'};
+  padding: 12px;
   font-size: ${props => props.menu ? `${fonts.h1Sm}` : `${fonts.metaSm}`};
   font-weight: 600;
   line-height: ${fonts.metaLineHeight};
   color: ${colors.textLight};
 
   @media ${media.small} {
-    align-self: stretch;
-    padding: 24px 16px;
+    padding: 24px 12px;
+  }
 
-    &:last-child {
-      margin-right: 14px;
-    }
+  @media ${media.medium} {
+    padding: 24px 12px 24px 20px;
   }
 
   @media ${media.large} {
-    padding: 36px 24px 28px;
+    padding: 40px 24px 24px;
     font-size: ${fonts.metaMd};
-
-    &:last-child {
-      margin-right: 32px;
-    }
   }
 `
 
 export const LegalLink = styled(Link) `
   display: inline-flex;
-  padding: 12px 12px 12px 30px;
+  padding: 12px;
   font-size: ${fonts.metaSm};
   line-height: ${fonts.metaLineHeight};
   color: ${colors.textDark};
 
   @media ${media.small} {
-    padding: 16px 12px 16px 30px;
+    padding: 16px 12px
   }
 
   @media ${media.large} {
-    margin-left: 24px;
     font-size: ${fonts.metaMd};
+    padding: 16px 24px;
   }
 `
 
 export const ExtLinks = styled.a `
   display: inline-flex;
   align-self: ${props => props.menu ? 'flex-start' : 'flex-end'};
-  padding: ${props => props.menu ? '12px 12px 12px 30px' : '12px 30px 12px 12px'};
+  padding: 12px;
   font-size: ${fonts.metaSm};
   line-height: ${fonts.metaLineHeight};
   color: ${colors.textDark};
 
   @media ${media.small} {
-    padding: 24px 16px 12px;
+    padding: 16px 12px
+  }
 
-    &:last-child {
-      margin-right: 14px;
-    }
+  @media ${media.medium} {
+    padding: 16px 12px 16px 16px;
   }
 
   @media ${media.large} {
     font-size: ${fonts.metaMd};
-
-    &:last-child {
-      margin-right: 40px;
-    }
+    padding: 16px 24px;
   }
 `
 

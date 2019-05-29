@@ -1,6 +1,17 @@
 import styled from "@emotion/styled"
+import { keyframes } from "@emotion/core"
 
 import { colors, fonts, media, padding } from "../utils/styles"
+
+const GetIn = keyframes `
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+`
 
 export const TransitionIndicator = styled.div `
   position: absolute;
@@ -16,54 +27,47 @@ export const TransitionIndicator = styled.div `
 
 export const HeaderContainer = styled.header `
   display: flex;
-  flex-direction: column;
-  width: 100vw;
+  flex-direction: row;
+  justify-content:space-between;
+  width: 100%;
+  padding: 0 16px;
   position: ${props => props.open ? 'fixed' : 'absolute'};
   top: 0;
   left: 0;
   z-index: 15;
   background: ${colors.darkest};
-  border-bottom: ${props => props.open ? `1px solid ${colors.grayTransparent}` : 0};
-  transition: border-bottom 0.15s ease;
 
-  @media ${media.small} {
-    flex-direction: row;
-    justify-content: space-between;
+  @media ${media.large} {
+    padding: 0 32px;
   }
-`
-
-export const MenuDisplay = styled.div `
-  display: flex;
-  justify-content: space-between;
 `
 
 export const Nav = styled.nav `
   display: ${props => props.header ? 'none' : 'flex'};
   flex-direction: column;
-  padding: ${props => props.page ? '48px 0 24px' : '0'};
+  padding: ${props => props.page ? '48px 0 24px' : 0};
+  margin: 0 2px;
 
   @media ${media.small} {
     display: ${props => props.menu ? 'none' : 'flex'};
     flex-direction: ${props => props.legal ? 'column' : 'row'};
   }
-`
 
-export const MenuItemContainer = styled.div `
-  height: ${({ state }) => (state === "entering" || state === "entered" ? `calc(100vh - 64px)` : 0)};
-  padding-bottom: ${({ state }) => (state === "entering" || state === "entered" ? '48px' : 0)};
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background: ${colors.darkest};
-  opacity: ${({ state }) => (state === "entering" || state === "entered" ? 1 : 0)};
-  transition: opacity 0.7s ease 0.5s, height 0.5s ease;
+  @media ${media.large} {
+    margin: 0;
+  }
 `
 
 export const FooterContainer = styled.footer `
-  width: 100%;
-  padding: 88px 0 36px;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  padding: 88px 16px 48px;
+  background: ${colors.darkest};
+
+  @media ${media.large} {
+    padding: 128px 32px 48px;
+  }
 `
 
 export const FooterSection = styled.section `
@@ -75,6 +79,30 @@ export const LegalContainer = styled.div `
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+`
+
+export const MenuItemContainer = styled.div `
+  height: ${({ state }) => (state === "entering" || state === "entered" ? '100vh' : 0)};
+  width: 100%;
+  padding: ${({ state }) => (state === "entering" || state === "entered" ? '0 16px 64px' : 0)};
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  background: ${colors.darkest};
+  border-bottom: ${({ state }) => (state === "entering" || state === "entered" ? `1px solid ${colors.grayTransparent}` : 0)};
+  transition: border-bottom 0.15s ease, height 0.5s ease;
+
+  * {
+    animation: ${GetIn} 500ms ease both 500ms;
+  }
+
+  @media ${media.small} {
+    display: none;
+  }
 `
 
 export const BaseSection = styled.section `

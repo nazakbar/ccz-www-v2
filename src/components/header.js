@@ -1,43 +1,21 @@
-import React, { useState } from "react"
+import React from "react"
 
-import { NavigationsMobile } from "./navigationsMobile"
-import { MenuContainer } from "./menuContainer"
-import { MenuExternalLinks, Navigations } from "./linkNavigations"
-import { HeaderContainer } from "./container"
-import { Copyright } from "./copyright"
+import { HomeLink, LetterIcon, WordIcon } from "./brandmark"
+import { HeaderContainer } from "./container";
+import { Navigations } from "./linkNavigations"
+import { ButtonMenu } from "./buttons"
 
-const Header = () => {
-
-  const socialLinks = [{
-    label: 'LinkedIn',
-    address: '/'
-  }, {
-    label: 'Twitter',
-    address: '/'
-  }, {
-    label: 'Instagram',
-    address: '/'
-  }, {
-    label: 'Medium',
-    address: '/'
-  }]
+const Header = ({ open, onClick }) => {
 
   const pageLinks = ['Capabilities', 'Company', 'Contact']
 
-  const [isToggle, setToggle] = useState('false')
-
-  const handleClick = () => {
-    setToggle(!isToggle)
-  }
-
   return (
-    <HeaderContainer open={!isToggle}>
-      <NavigationsMobile onClick={handleClick}>{`${!isToggle ? 'Close' : 'Menu'}`}</NavigationsMobile>
-      <MenuContainer open={!isToggle}>
-        <MenuExternalLinks menu="true" links={socialLinks} />
-        <Navigations page="true" menu="true" links={pageLinks} />
-        <Copyright menu="true" />
-      </MenuContainer>
+    <HeaderContainer >
+      <HomeLink onClick={onClick}>
+        <LetterIcon header="true" />
+        <WordIcon />
+      </HomeLink>
+      <ButtonMenu onClick={onClick}>{`${open ? 'Close' : 'Menu'}`}</ButtonMenu>
       <Navigations header="true" links={pageLinks} />
     </HeaderContainer>
   )

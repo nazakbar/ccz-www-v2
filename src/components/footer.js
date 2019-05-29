@@ -14,8 +14,7 @@ const Footer = () => {
     {
       label: `Terms of Use`,
       address: `/terms-of-use`
-    },
-    {
+    }, {
       label: `Privacy Policy`,
       address: `/privacy-policy`
     }
@@ -23,27 +22,24 @@ const Footer = () => {
 
   const socialLinks = [
     {
-      label: `LinkedIn`,
-      address: `/`
-    },
-    {
-      label: `Twitter`,
-      address: `/`
-    },
-    {
-      label: `Instagram`,
-      address: `/`
-    },
-    {
-      label: `Medium`,
-      address: `/`
+      label: 'LinkedIn',
+      address: 'https://www.linkedin.com/company/concrezan'
+    }, {
+      label: 'Twitter',
+      address: 'https://twitter.com/concrezan'
+    }, {
+      label: 'Instagram',
+      address: 'https://www.instagram.com/concrezan'
+    }, {
+      label: 'Medium',
+      address: 'https://medium.com/@concrezan'
     }
   ]
 
   return (
     <FooterContainer>
       <FooterSection>
-        <HomeLink>
+        <HomeLink footer="true">
           <LetterIcon />
         </HomeLink>
         <Navigations links={pageLinks} />

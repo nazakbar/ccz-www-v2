@@ -74,7 +74,8 @@ export const BodyMeta = styled.p `
 `
 
 export const MetaText = styled.span `
-  padding: 12px 12px 12px 30px;
+  padding: 12px;
+  margin: 0 2px;
   display: inline-flex;
   align-self: ${props => props.menu ? 'stretch' : 'flex-end'};
   font-size: ${fonts.metaSm};
@@ -82,11 +83,12 @@ export const MetaText = styled.span `
   color: ${colors.textDark};
 
   @media ${media.small} {
-    padding: 16px 12px 12px 32px;
+    padding: 16px 12px;
   }
 
   @media ${media.large} {
-    margin-left: 24px;
+    margin: 0;
+    padding: 16px 24px;
     font-size: ${fonts.metaMd};
   }
 `

@@ -39,7 +39,7 @@ export const MenuExternalLinks = ({ links, className, onClick, menu }) => (
     {links.map((link, index) => (
       <ExtLinks menu={menu}
         className={className}
-        href={link.address}
+        href={`${link.address}`}
         target="_blank"
         rel="noreferrer noopener"
         key={index}

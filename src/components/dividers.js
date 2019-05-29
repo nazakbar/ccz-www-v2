@@ -9,10 +9,10 @@ const Dividers = styled.hr `
 `
 
 export const FullDividers = styled(Dividers) `
-  margin: 24px 30px;
+  margin: 24px 14px;
 
   @media ${media.large} {
-    margin: 24px 56px;
+    margin: 24px;
   }
 `
 

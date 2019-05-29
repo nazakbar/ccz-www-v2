@@ -10,18 +10,17 @@ const GlobalStyles = () => (
 
       html {
         box-sizing: border-box;
-      }
-
-      html,
-      body {
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        padding: 0;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
         font-family: ${fontDefault};
         font-weight: 400;
         font-size: 16px;
         line-height: ${fonts.sizeLineHeight};
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -67,6 +66,26 @@ const GlobalStyles = () => (
         background: none;
         border: none;
         font: inherit;
+      }
+
+      button,
+      input {
+        overflow: visible;
+      }
+
+      button,
+      select {
+        text-transform: none;
+      }
+
+      textarea {
+        overflow: auto;
+      }
+
+      hr {
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible;
       }
 
     `}

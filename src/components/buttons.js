@@ -5,8 +5,8 @@ import { fonts, colors, media } from "../utils/styles"
 export const ButtonMenu = styled.button `
   height: 64px;
   display: inline-flex;
-  align-items: center;
-  padding: 0 30px;
+  vertical-align: baseline;
+  padding: 24px 14px;
   font-size: ${fonts.metaSm};
   font-weight: 600;
   color: ${colors.textLight};

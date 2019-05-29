@@ -23,17 +23,20 @@ export const WordMark = ({ className }) => (
 )
 
 const Home = styled(Link) `
-  padding: 24px 24px 24px 30px;
+  padding: 12px 14px;
   display: inline-flex;
-  align-self: flex-start;
+  align-self: ${props => props.footer ? 'flex-end' : 'flex-start'};
 
   & svg {
     vertical-align: bottom;
   }
 
+  @media ${media.medium} {
+    padding: 24px 14px;
+  }
+
   @media ${media.large} {
-    padding: 32px;
-    margin-left: 24px;
+    padding: 32px 24px;
   }
 `
 
@@ -56,8 +59,8 @@ export const WordIcon = styled(WordMark) `
   }
 `
 
-export const HomeLink = ({ children }) => (
-  <Home to="/" aria-label="homepage">
+export const HomeLink = ({ children, onClick, footer }) => (
+  <Home footer={footer} onClick={onClick} to="/" aria-label="homepage">
     {children}
   </Home>
 )
