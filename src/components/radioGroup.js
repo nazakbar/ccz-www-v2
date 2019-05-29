@@ -12,7 +12,7 @@ export const RadioInput = ({ name, value, checked, onChange, label }) => (
       checked={checked}
       onChange={onChange}
     />
-    <RadioLabel>{label}</RadioLabel>
+    <RadioLabel htmlFor={name}>{label}</RadioLabel>
   </RadioContainer>
 )
 

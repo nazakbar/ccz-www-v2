@@ -22,7 +22,7 @@ export const ButtonSubmit = styled.button `
   border-radius: 24px;
   font-size: ${fonts.metaSm};
   font-weight: 600;
-  color: ${colors.textLight};
+  color: ${colors.darkest};
   background: ${colors.yellow};
 
   :disabled {
