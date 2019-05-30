@@ -7,9 +7,9 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://concrezan.com`,
+        siteUrl: `https://www.example.com`,
       },
     },
     {
