@@ -1,5 +1,6 @@
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 import { fonts, colors, media } from "../utils/styles"
 
@@ -43,7 +44,7 @@ export const LegalLink = styled(Link) `
   }
 `
 
-export const ExtLinks = styled.a `
+export const ExtLinks = styled(OutboundLink) `
   display: inline-flex;
   align-self: ${props => props.menu ? 'flex-start' : 'flex-end'};
   padding: 12px;
