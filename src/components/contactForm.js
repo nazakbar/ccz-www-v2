@@ -16,14 +16,14 @@ export const ContactForm = () => {
     organization: '',
   }
 
-  const { selected, setSelection, errors, values, handleChange, handleSubmit, result } = useForm(login, initialValues, validate)
+  const { isEnabled, selected, setSelection, errors, values, handleChange, handleSubmit, result } = useForm(login, initialValues, validate)
 
   function login() {
     console.log(values);
   }
 
   return (
-    <FormContainer label="Send" onSubmit={handleSubmit} result={result}>
+    <FormContainer label="Send" onSubmit={handleSubmit} result={result} disabled={!isEnabled}>
       {
         result 
         ? <Submission label={result} /> 
