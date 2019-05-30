@@ -23,13 +23,15 @@ const getTransitionStyles = {
 const PageTransition = ({ children, location }) => {
 
   return (
-    <TransitionGroup>
+    <TransitionGroup component={null}>
       <Transition
         key={location.pathname}
         timeout={{
           enter: timeout,
           exit: timeout,
         }}
+        mountOnEnter
+        unmountOnExit
       >
         {status => (
           <>
@@ -40,7 +42,7 @@ const PageTransition = ({ children, location }) => {
             >
               {children}
             </main>
-            <TransitionIndicator status={status} />
+            <TransitionIndicator unmountOnExit status={status} />
           </>
         )}
       </Transition>

@@ -24,8 +24,6 @@ const GlobalStyles = () => (
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%;
         color: ${colors.text};
         background-color: ${colors.darkest};
 

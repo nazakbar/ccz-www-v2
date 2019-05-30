@@ -16,8 +16,8 @@ const GetIn = keyframes `
 export const TransitionIndicator = styled.div `
   position: absolute;
   bottom: ${({ status }) => (status === "entering" || status === "entered" ? 0 : '-100%')};
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   z-index: 18;
   background: ${colors.gray};
   opacity: ${({ status }) => (status === "entering" || status === "entered" ? 0 : 0.3)};
@@ -111,7 +111,7 @@ export const BaseSection = styled.section `
   margin: 0 30px;
 
   @media ${media.large} {
-    margin: 0 78px;
+    margin: 0 56px;
   }
 `
 
@@ -251,13 +251,6 @@ export const ListMeta = styled.li `
     }
   }
 `
-
-// export const SubmissionContainer = styled.div `
-//   position: relative;
-//   display: flex;
-//   align-self: flex-start;
-//   background: ${colors.darkest};
-// `
 
 export const SubmissionContainer = styled.div `
   position: absolute;

@@ -18,7 +18,7 @@ import { useToggle } from "../components/toggle-hook"
 
 const Layout = ({ children, location }) => {
 
-  const { isToggled, handleClick } = useToggle()
+  const { isToggled, handleClick, resetClick } = useToggle()
 
   return (
     <StaticQuery
@@ -34,12 +34,12 @@ const Layout = ({ children, location }) => {
       render={data => (
         <>
           <GlobalStyles />
-          <Header open={!isToggled} onClick={handleClick} />
+          <Header open={!isToggled} onClick={handleClick} clearMenu={resetClick} />
           <Menu open={!isToggled} onClick={handleClick} />
           <PageTransition location={location}>
             {children}
-            <Footer />
           </PageTransition>
+          <Footer />
         </>
       )}
     />

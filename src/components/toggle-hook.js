@@ -12,8 +12,13 @@ export const useToggle = () => {
     setToggle(!isToggled)
   }
 
+  const resetClick = () => {
+    setToggle('false')
+  }
+
   return {
     isToggled,
-    handleClick
+    handleClick,
+    resetClick
   }
 }

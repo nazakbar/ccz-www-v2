@@ -23,7 +23,7 @@ export const WordMark = ({ className }) => (
 )
 
 const Home = styled(Link) `
-  padding: 12px 14px;
+  padding: ${props => props.header ? '24px 14px' : '12px 14px'};
   display: inline-flex;
   align-self: ${props => props.footer ? 'flex-end' : 'flex-start'};
 
@@ -59,8 +59,8 @@ export const WordIcon = styled(WordMark) `
   }
 `
 
-export const HomeLink = ({ children, onClick, footer }) => (
-  <Home footer={footer} onClick={onClick} to="/" aria-label="homepage">
+export const HomeLink = ({ children, onClick, footer, header }) => (
+  <Home header={header} footer={footer} onClick={onClick} to="/" aria-label="homepage">
     {children}
   </Home>
 )
