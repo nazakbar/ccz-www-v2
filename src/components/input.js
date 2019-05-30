@@ -107,6 +107,7 @@ export const Legend = styled.legend `
 
 export const Container = styled.form `
   display: flex;
+  position: relative;
   flex-direction: column;
   padding: 0;
   margin: 0 0 88px;

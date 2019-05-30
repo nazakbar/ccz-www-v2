@@ -252,9 +252,19 @@ export const ListMeta = styled.li `
   }
 `
 
+// export const SubmissionContainer = styled.div `
+//   position: relative;
+//   display: flex;
+//   align-self: flex-start;
+//   background: ${colors.darkest};
+// `
+
 export const SubmissionContainer = styled.div `
-  position: relative;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-self: flex-start;
+  align-items: center;
   background: ${colors.darkest};
 `
