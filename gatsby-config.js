@@ -3,6 +3,7 @@ module.exports = {
     title: `Concrezan`,
     description: `Concrezan is an independent brand experience and service design consultancy. We’re built different. We dream big for a better future.`,
     author: `@concrezan`,
+    siteUrl: `https://concrezan.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -70,5 +71,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
+    `gatsby-plugin-sitemap`,
   ],
 }
